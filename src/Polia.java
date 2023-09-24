@@ -1,5 +1,8 @@
+import java.util.Arrays;
+
 public class Polia {
-    public static int spocitaj (int[] cisla){
+
+    public static int spocitaj(int[] cisla) {
         int sucet = 0;
         for (int i = 0; i < cisla.length; i++) {
             sucet = sucet + cisla[i];
@@ -7,18 +10,18 @@ public class Polia {
         return sucet;
     }
 
-    public static double priemeruj (int[] cisla){
+    public static double priemeruj(int[] cisla) {
         int sucet = 0;
-        int pocetCisel  = 0;
+        int pocetCisel = 0;
         for (int i = 0; i < cisla.length; i++) {
-            pocetCisel= pocetCisel + 1;
+            pocetCisel = pocetCisel + 1;
             sucet = sucet + cisla[i];
         }
         double priemer = (double) sucet / pocetCisel;
         return priemer;
     }
 
-    public static int pocetCiselaMax (int[] cisla) {
+    public static int pocetCiselaMax(int[] cisla) {
         int maxCislo = cisla[0];
         int pocetCisel = 0;
         for (int i = 0; i < cisla.length; i++) {
@@ -28,11 +31,21 @@ public class Polia {
             }
         }
         System.out.println("Počet čísiel v poli je: " + pocetCisel);
+
         return maxCislo;
     }
 
     public static void main(String[] args) {
         int[] poleCisiel = {4, 5, 9, 12, 6};
+/*
+        Arrays.sort(poleCisiel);
+        int maxCislo = poleCisiel[0];
+        int minCislo = poleCisiel[poleCisiel.length - 1];
+
+        System.out.println("max: " + maxCislo);
+        System.out.println("min: " + minCislo);
+*/
+
         int sucet = spocitaj(poleCisiel);
         double priemer = priemeruj(poleCisiel);
         int maxCislo = pocetCiselaMax(poleCisiel);
